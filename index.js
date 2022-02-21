@@ -13,7 +13,7 @@ function guessBtnClicked(){
     }else if (guessNo > randomNumber){
         message.innerHTML = "Your guess is too high";
     }else {
-        message.innerHTML = "Correct, the secret number is ${guessedNo}";
+                    message.innerHTML = `Correct, the secret number is ${guessNo}`
     }
 
     setTimeout(function(){
