@@ -10,7 +10,7 @@ function guessBtnClicked(){
 
     if (guessedNo < randomNumber){ 
         message.innerHTML = "Your guess is too low";
-    }else if (guessNo > randomNumber){
+    }else if (guessedNo > randomNumber){
         message.innerHTML = "Your guess is too high";
     }else {
           message.innerHTML = `Correct, the secret number is ${guessedNo}`;
