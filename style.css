@@ -4,4 +4,12 @@ body{
 
 .container{
     text-align: center;
+    border-style: outset;
+
+}
+
+.guess_number{
+    padding: 15px 90px;
+    margin: 50px;
+    background-color: transparent;
 }
