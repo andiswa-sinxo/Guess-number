@@ -6,14 +6,14 @@ const message = document.querySelector(".message")
 
 
 function guessBtnClicked(){
-    const guessNo = Number(guess_number.value);
+    const guessedNo = Number(guess_number.value);
 
-    if (guessNo < randomNumber){ 
+    if (guessedNo < randomNumber){ 
         message.innerHTML = "Your guess is too low";
     }else if (guessNo > randomNumber){
         message.innerHTML = "Your guess is too high";
     }else {
-                    message.innerHTML = `Correct, the secret number is ${guessNo}`
+          message.innerHTML = `Correct, the secret number is ${guessedNo}`;
     }
 
     setTimeout(function(){
