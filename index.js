@@ -10,16 +10,32 @@ function guessBtnClicked(){
 
     if (guessedNo < randomNumber){ 
         message.innerHTML = "Your guess is too low";
+
+        setTimeout(function(){
+            message.innerHTML = "";
+        }, 2000);
+
     }else if (guessedNo > randomNumber){
         message.innerHTML = "Your guess is too high";
+        setTimeout(function(){
+            message.innerHTML = "";
+        }, 2000);
     }else {
-          message.innerHTML = `Correct, the secret number is ${guessedNo}`;
-    }
+          message.innerHTML = `Correct, the secret number is ${guessedNo} !!!`;
+          randomNumber = Math.ceil((Math.random() * 100))
+          setTimeout(function(){
+            message.innerHTML = "";
+        }, 5000);
 
-    setTimeout(function(){
-        message.innerHTML = "";
-    }, 2000);
+          setTimeout(function(){
+            message.innerHTML = "New game has started!!";
+        }, 3000);
+        
+    } 
+
 }
 
 
 btn.addEventListener('click', guessBtnClicked)
+
+
