@@ -8,8 +8,9 @@ const errorMsg = document.querySelector(".errorMsg")
 
 function guessBtnClicked(){
     const guessedNo = Number(guess_number.value);
+console.log(randomNumber)
 
-    if(guessedNo <= 1 || guessedNo >= 100){
+    if(guessedNo < 1 || guessedNo > 100){
         errorMsg.innerHTML = "Please choose a number between 1 and 100"
         errorMsg.classList.add("errorColour");
         setTimeout(function(){
@@ -31,7 +32,7 @@ function guessBtnClicked(){
 
      }else{
           message.innerHTML = `Correct, the secret number is ${guessedNo} !!!`;
-          message.classList.add("message")
+        //   message.classList.add("message")
           randomNumber = Math.ceil((Math.random() * 100))
           setTimeout(function(){
             message.innerHTML = "";
@@ -39,7 +40,7 @@ function guessBtnClicked(){
 
           setTimeout(function(){
             message.innerHTML = "New game has started!!";
-            message.classList.add("message")
+            // message.classList.add("message")
 
         }, 3000);
     }
